@@ -630,6 +630,7 @@ input::placeholder, textarea::placeholder {
     border: none;
     color: white;
     background-color:rgb(76, 159, 247);
+    margin-bottom: 50px;
 }
 
 .btn-md:hover{
