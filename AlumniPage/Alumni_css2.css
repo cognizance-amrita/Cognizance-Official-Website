@@ -1,0 +1,82 @@
+
+
+/*============================================================== Education ==============================================================*/
+
+@media only screen and (max-width: 1300px){
+
+    .timecontainer .personul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 50px;
+        list-style: none;
+        padding: 0;
+        justify-self: center;
+        align-items: start; 
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+
+    .timecontainer .personul{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 50px;
+        list-style: none;
+        padding: 0;
+        justify-self: center;
+        align-items: start; 
+    }
+
+}
+
+
+@media only screen and (max-width: 400px){
+
+    .personli {
+        background-image: linear-gradient(360deg, rgb(111, 247, 199), rgb(95, 175, 251));
+        border-radius: 10px;
+        padding: 20px;
+        width: 280px;
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.5s ease-in-out; /* Smooth transition for height */
+    }
+
+    .show img {
+        border-radius: 10px;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        transition: 0.5s ease-in-out;
+    }
+
+}
+
+
+/*================================================================ Contact ================================================================*/
+
+
+@media only screen and (max-width: 690px){
+
+    .logos li a i{
+        font-size: large;
+    }
+
+    .logos li{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    
+    .Nehal_Name_2{
+        font-size: medium;
+        animation: nametransition 3s ease-in-out infinite;
+    }
+
+
+}
+
+/*================================================================  ================================================================*/
