@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" href="assets\logo.png" type="image/x-icon">
+    <title>Cognizance</title>
+</head>  
+
+<body>
+
+<!-- ================================================== Navigation Bar ================================================== -->
+
+    <div class="navbar">
+        <nav class="menubar">
+            <ul>
+                <li><a href="#home"><b>Home</b></a></li>
+                <li><a href="TeamPage\Team_index.html"><b>The Team</b></a></li>
+                <li class="deltali"><a href="DeltaPage\Delta_index.html"><b class="delta_logo"><img class="d1" src="assets\delta.png" alt="Delta"><img class="d2" src="assets\deltagif.gif" alt="Delta"></b></a></li>
+                <li><a href="https://preliminary-tasks.cognizance-amrita.in/" target="_blank"><b>Weekly Tasks</b></a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdfO8NJdNarKcUo3ZuEjn6pNGOjrbQ1i6LECyazYypPbmcKOA/closedform" target="_blank"><b>Apply</b></a></li>
+                <li><a href="#contact"><b>Contact</b></a></li>
+                <!--<audio id="myAudio" controls><source src="assets\audio.mp3" type="audio/mpeg"></audio>
+                <li class="playButton_1" onclick="toggleMute()"><span><i class="fas fa-volume-high"></i></span></li> -->
+                
+                <li id="menuToggle" onclick="toggleMenu()"><span class="dots-btn"><i class="fas fa-bars"></i></span></li>
+                <li id="menulist" class="menu-open"><ul>
+                    <li><a href="#home"><b>Home</b></a></li>
+                    <li><a href="TeamPage\Team_index.html"><b>The Team</b></a></li>
+                    <li class="deltali"><a href="DeltaPage\Delta_index.html"><b class="delta_logo"><img class="d1" src="assets\delta.png" alt="Delta"><img class="d2" src="assets\deltagif.gif" alt="Delta"></b></a></li>
+                    <li><a href="https://preliminary-tasks.cognizance-amrita.in/" target="_blank"><b>Weekly Tasks</b></a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdfO8NJdNarKcUo3ZuEjn6pNGOjrbQ1i6LECyazYypPbmcKOA/closedform" target="_blank"><b>Apply</b></a></li>
+                    <li><a href="#contact"><b>Contact</b></a></li>
+                    <!--<li class="playButton_2" onclick="toggleMute()"><span><i class="fas fa-volume-high"></i></span></li>-->
+                </li>
+            </ul>
+            
+        </nav>
+    </div>
+
+<!-- ================================================== Home ================================================== -->
+
+    <div id="home" class="home" onclick="Menuoff()">
+
+        <div class="opening">
+            <div class="o1"></div>
+        </div>
+
+        <div class="Home_Container">
+
+            <div class="Home_Text">
+                <img class="cognizance_Name" src="assets\Cognizance.png" alt="Cognizance">
+                <p>A student club for innovative minds</p>
+            </div>
+
+            <canvas id="riveCanvas" width="500px" height="500px"></canvas>
+
+            <div class="contact_container1">
+                <ul class="logos1">
+                    <li><a href="mailto:cognizance@ch.amrita.edu" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/cognizance-amrita" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/cognizance-amrita/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/cognizance_amrita" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> 
+                    <li class="cognizance_Name_2"><b>Cognizance</b></li>
+                </ul>
+            </div>
+
+        </div>   
+
+    </div>
+    
+
+    <!-- ================================================== all ================================================== -->
+    <div id="all" class="all" onclick="Menuoff()">
+
+        <!-- ================================================== About ================================================== -->
+       
+        <div class="About_Container"> 
+
+            <div class="Title_text1"><hr><strong>About Cognizance</strong><hr></div>
+
+            <div class="aboutcog">
+                <p>We are a community of passionate students from Amrita Vishwa Vidyapeetham. Cognizance is for everyone, regardless of their career stage or current level of knowledge. Cognizance is a place where people of all genders and backgrounds can come together. We believe that learning is more enjoyable and efficient when we assist one another along the way.</p>
+                <br>
+                <p>The club has about 200+ passionate members currently</p>
+                <br>
+                <div class="whycog">Why Cognizance?</div>
+                <div class="whycogans">
+                    <div>Experienced Mentors</div>
+                    <div>Peer to Peer mentoring</div>
+                    <div>Collaborative Learning Environment</div>
+                    <div>Hackathons and Competitions</div>
+                </div>
+                <br>
+                <div class="knowus">Get to Know Our <a href="TeamPage\Team_index.html">TEAM</a> and <a href="AlumniPage\Alumni_index.html">ALUMNI</a></div>
+            </div>
+
+        </div>
+
+    
+
+        <!-- ================================================== Domains ================================================== -->
+
+        <div class="Domain_Container"> 
+
+            <div class="Title_text"><hr><strong>Domain We Have</strong><hr></div>
+
+            <div class="domainlist">
+                <div class="dl">
+                    <div class="dlbg">
+                        <p class="dltitle">Open-Source</p>
+                        <p>The ideals of open exchange, collaborative involvement, quick prototyping, transparency , and community-oriented development are all embraced and celebrated by open source projects, products, and initiatives. A fullstack development relates to the creation of a web application's front end and back end .</p>
+                    </div>
+                    <div><img src="assets\opensource.jpg" alt="Open-Source"></div>
+                </div>
+                <div class="dl">
+                    <div class="dlbg">
+                        <p class="dltitle">Artificial Intelligence</p>
+                        <p>Artificial intelligence is the study and development of computers and robots capable of mimicking and exceeding human capabilities. Machine learning is a AI subcategory employs algorithms to automatically learn insights and recognise patterns in data, with the goal of making increasingly better decisions.</p>
+                    </div>
+                    <div><img src="assets\ai.jpg" alt="Artificial Intelligence"></div>
+                </div>
+                <div class="dl">
+                    <div class="dlbg">
+                        <p class="dltitle">Cyber Security</p>
+                        <p>The practise of defending computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks . It is also referred to as information technology security or electronic data security.</p>
+                    </div>
+                    <div><img src="assets\cys.jpg" alt="Cyber Security"></div>
+                </div>
+                <div class="dl">
+                    <div class="dlbg">
+                        <p class="dltitle">Competetive Programming</p>
+                        <p>A mind sport where participants solve algorithmic problems within a time limit. It enhances problem-solving and coding skills, often involving contests like Codeforces, LeetCode, and HackerRank. Participants write efficient code to solve complex problems, aiming to optimize both speed and accuracy.</p>
+                    </div>
+                    <div><img src="assets\cp.png" alt="Competetive Programming"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================================================== achivements ================================================== -->
+
+        <!-- <div class="Achivement_Container"> 
+
+            <div class="Title_text"><hr><strong>Our Achievements</strong><hr></div>
+            
+
+        </div>-->
+
+        <!-- ================================================== Updates ================================================== -->
+    
+        <div class="Work_Container">   
+
+            <div class="Title_text"><hr><strong>Club Updates</strong><hr></div>
+
+            <div class="arrows">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+
+            <div class="wrapper">
+                <ul class="carousel">
+
+                    <li class="card">
+                        <div class="img"><img src="assets\DeltaCard.jpg" alt="img" draggable="false"></div>
+                        <h2>Delta 2K25</h2>
+                        <span>15th - 16th Feb 2025</span>
+                        <div class="video-container">
+                            <!--<iframe  width="300" height="150" src="https://drive.google.com/file/d/1EkKHSV7nzW-ASd7U877uUyHpWvPdY4Js/preview" frameborder="0" allowfullscreen></iframe>-->
+                            <div class="about_the_work">Delta, Cognizance's premier two-day hackathon, offers a dynamic platform for college-level innovators to collaborate, develop skills, and showcase their talents across multiple domains. Designed to ignite innovation and inspire aspiring tech enthusiasts and entrepreneurs, Delta fosters creativity, problem-solving, and teamwork at its core. </div>
+                            <div class="try_button"><a href="DeltaPage\Delta_index.html" class="button" target="_blank"> Visit </a></div>
+                        </div>
+                    </li>
+
+                    <li class="card">
+                        <div class="img"><img src="assets\tantrotsav.jpg" alt="img" draggable="false"></div>
+                        <h2>Tantrotsav'25</h2>
+                        <span>29th - 30th Jan 2025</span>
+                        <div class="video-container">
+                            <div class="about_the_work">Tantrotsav is the annual technical and non-technical fest of Amrita Vishwa Vidyapeetham, Chennai Campus. The festival celebrates the spirit of innovation, engineering, and technology with a diverse range of competitions, workshops, lectures, and exhibitions. This fest features an array of over 100+ events, including hackathons, coding challenges, robotics competitions.</div>
+                            <div class="try_button"><a href="https://tantrotsav.amrita.edu/" class="button" target="_blank"> Visit Main Site </a></div>
+                            <div class="try_button"><a href="https://tantrotsav.amrita.edu/" class="button" target="_blank"> View Cognizance Events</a></div>
+                        </div>
+                    </li>
+            
+                    
+                </ul>
+            </div>
+
+        </div> 
+
+    </div>
+        
+
+<!-- ================================================== Contact ================================================== -->
+
+    <div id="contact" class="contact" onclick="Menuoff()">
+        <div class="contact_container">
+
+            <div class="Title_text2"><hr><strong>Reach Out</strong><hr></div>
+            <div class="my_email"><b>cognizance.amrita@gmail.com</b></div>
+
+            <div class="contact-form-div">
+                <table class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="b968d8de-7e59-4154-be9d-4817df4cc6d1">
+                        <tr>
+                            <td><input type="text" name="name" id="name" placeholder="Name" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="email" id="email" placeholder="Email" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="subject" id="subject" placeholder="Subject" required></td>
+                        </tr>
+                        <tr>
+                            <td><textarea name="message" id="message" placeholder="Your Message" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="btn-md">Send</button></td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="contact_container2" onclick="Menuoff()">
+            <ul class="logos">
+                <li><a href="mailto:cognizance@ch.amrita.edu" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="https://github.com/cognizance-amrita" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/cognizance-amrita/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/cognizance_amrita/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> 
+                <li class="cognizance_Name_2"><b>Cognizance</b></li>
+            </ul>
+        </div>
+
+    </div>
+        
+<!-- ======================================================================================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<script src="https://unpkg.com/@rive-app/canvas@2.8.3"></script>
+<script src="js.js"></script>       
+
+</body>
+
+</html>

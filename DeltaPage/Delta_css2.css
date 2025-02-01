@@ -1,0 +1,144 @@
+
+
+/*============================================================== Education ==============================================================*/
+
+@media only screen and (max-width: 1300px){
+
+    .Title_text{
+        font-size: large;
+        margin-top: 10px;
+        color:lightblue;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:center
+    }
+
+    .timecontainer ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        list-style: none; 
+        padding: 0;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+
+    .timecontainer ul{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px; 
+        list-style: none; 
+        padding: 0;
+        justify-self: center;
+    }
+
+    .timecontainer li{
+        background-image: linear-gradient(rgb(58, 60, 207),rgb(33, 109, 250));
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    li img{
+        height: 350px;
+        width: auto;
+        align-self: center;
+        border-radius: 10px;
+    }
+
+    .joinqr{
+        height: 200px;
+        width: auto;
+        align-self: center;
+        border-radius: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+    .Title_text img{
+        width: 200px;
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 330px){
+
+    .timecontainer li{
+        background-image: linear-gradient(rgb(58, 60, 207),rgb(33, 109, 250));
+        border-radius: 10px;
+        padding: 20px;
+        width: 270px;
+        margin-bottom: 50px;
+    }
+
+    li img{
+        height: 320px;
+        width: auto;
+        align-self: center;
+        border-radius: 10px;
+    }
+
+    .joinqr{
+        height: 200px;
+        width: auto;
+        align-self: center;
+        border-radius: 10px;
+    }
+
+    li div div a b, .join{
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        padding: 10px;
+        width: fit-content;
+        height: fit-content;
+        font-size: small;
+    }
+
+}
+
+
+/*================================================================ Contact ================================================================*/
+
+
+@media only screen and (max-width: 690px){
+
+    .logos li a i{
+        font-size: large;
+    }
+
+    .logos li{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    
+    .Nehal_Name_2{
+        font-size: medium;
+        animation: nametransition 3s ease-in-out infinite;
+    }
+
+    .cog_email{
+        display: none;
+    }
+
+    .cog_email2{
+        display: block;
+        color: white;
+        background-color: black;
+    }
+    .cog_email2 b{
+        margin-left:30px;
+        top: -100px;
+    }
+
+}
+
+/*================================================================  ================================================================*/

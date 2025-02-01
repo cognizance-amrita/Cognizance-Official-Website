@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Sofia&display=swap');
+
+/*================================================================ Html ================================================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    text-decoration: none;
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*================================================================ Scrool ===============================================================*/
+
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+
+::-webkit-scrollbar-track {
+    background-image:linear-gradient(360deg, black,rgb(0, 5, 50), rgb(2, 146, 208));
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(95, 175, 251); 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(111, 247, 199); 
+}
+
+/*================================================================ Body ================================================================*/
+
+body{
+    height: auto;
+    overflow-x: hidden;
+    background-image:linear-gradient(180deg, black,rgb(0, 5, 50), rgb(3, 85, 120));
+}
+
+.Education_Container,.contact_container{
+    padding: 50px;
+    min-height: 100vh;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    display: block;
+    z-index: 10;
+    max-width: 95%;
+    margin:  0 auto;
+}
+
+/*============================================================= Opening ==============================================================*/
+
+.opening{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.o1{
+    position: relative;
+    background-image: linear-gradient(360deg, rgb(111, 247, 199), rgb(95, 175, 251) );
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+}
+
+.o1 {
+    animation: openright 0.5s ease-in-out forwards;
+}
+
+@keyframes openright{
+    from {
+        visibility: visible;
+        transform: translateX(0);
+      }
+      to {
+        visibility: hidden;
+        transform: translateX(-100%);
+        display: none;
+      }
+}
+
+.coglogo{
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    height: 500px;
+    width: auto;
+    transform: translate(-80px, 80px);
+}
+
+
+/*=============================================================== Main ===============================================================*/
+
+.Education_Container {
+    padding-top: 100px;
+}
+
+.timecontainer .personul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    justify-self: center;
+    align-items: start; /* Ensure each grid item sizes independently */
+}
+
+.personli {
+    background-image: linear-gradient(360deg, rgb(111, 247, 199), rgb(95, 175, 251));
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease-in-out; /* Smooth transition for height */
+}
+
+.personli:hover {
+    min-height: 500px; /* Increase the height dynamically on hover */
+}
+
+.holder {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show img {
+    border-radius: 10px;
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.show p {
+    text-align: right;
+    font-size: large;
+}
+
+.hide {
+    max-height: 0;
+    overflow: hidden;
+    font-size: small;
+    transition: max-height 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.hide div {
+    text-align: left;
+}
+
+.personli:hover .hide {
+    max-height: 350px; /* Adjust this value to match your content */
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+}
+
+.links .li i {
+    color: black;
+    font-size: x-large;
+}
+
+.links .li i:hover {
+    transform: translateY(-3px);
+}
+
+
+/*=============================================================== Contact ==========================================================*/
+
+
+
+.logos{
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.logos li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logos li a i{
+    width:30px;
+    transition: ease;
+    color: white;
+    font-size: x-large;
+}
+
+.logos .lin i:hover,.logos .ins i:hover, .logos .git i:hover{
+    width:30px;
+    transition: ease;
+    color: rgb(76, 159, 247);
+  }
+
+.cog_Name_2{
+    font-size: large;
+    color: white;
+    margin-top: 2px;
+    animation: nametransition 3s ease-in-out infinite;
+}
+
+
+@keyframes nametransition {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+    }
+    20% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+    }
+    80% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+    }
+}
+
+/*=============================================================== home ==========================================================*/
+  
+  .top_buttons{
+    padding: 10px;
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    gap: 10px;
+  }
+
+ .home_arrow{
+    background-color: #ffffff;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fa-arrow-left:hover{
+    color: rgb(0, 98, 255);
+    }
