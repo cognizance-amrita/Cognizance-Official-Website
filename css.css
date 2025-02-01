@@ -21,7 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'comfortaa', cursive;
+    font-family: "Outfit", serif;
     text-decoration: none;
     outline: none;
 }
@@ -29,6 +29,7 @@
 html{
     scroll-behavior: smooth;
 }
+
 
 /*================================================================ Scrool ===============================================================*/
 
@@ -157,16 +158,18 @@ hr{
     background-image: none;
 }
 
-.delta_logo .d1{
-    height: 16px;
+.delta_logo .d2{
+    height: 20px;
     width: auto;
     display: none;
+    transform: translateY(4px);
 
 }
 
-.delta_logo .d2 {
+.delta_logo .d1 {
     height: 20px;
     width: auto;
+    transform: translateY(4px);
   }
   
 .menubar li a:hover .d1 {
@@ -174,7 +177,7 @@ hr{
   }
   
 .menubar li a:hover .d2 {
-    transform: translateY(-3px);
+    display: inline;
   }
 
 /*============================================================= Opening ==============================================================*/
