@@ -251,6 +251,8 @@ hr{
     color: rgb(76, 159, 247);
   }
 
+
+
 /*=============================================================== About ===============================================================*/
 
 .aboutcog{
@@ -302,6 +304,10 @@ hr{
     border-radius: 10px;
     cursor: pointer;
     transition: background-position 0.5s ease, transform 0.3s ease;
+}
+
+.knowus br{
+    display: none;
 }
 
 .knowus a:hover {
