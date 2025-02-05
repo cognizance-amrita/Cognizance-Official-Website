@@ -61,7 +61,7 @@ function Menuoff() {
 });*/
 
 const r = new rive.Rive({
-    src: 'assets\\RiveRobot.riv',  // Ensure the file is in the same directory
+    src: 'HomePage\\assets\\RiveRobot.riv',  // Ensure the file is in the same directory
     canvas: document.getElementById('riveCanvas'),
     autoplay: true,
     stateMachines: 'State Machine 1',  // Replace with the correct state machine name
