@@ -1,0 +1,301 @@
+/*================================================================ Nav Bar ================================================================*/
+
+#menuToggle {
+    position: absolute;
+    display: none;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+#menuToggle:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+#menulist{
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    width: 200px; 
+    height:fit-content;
+    text-align: center;
+    list-style-type: none;
+}
+
+#menulist li {
+    padding-bottom: 5px; 
+}
+
+@media only screen and (max-width: 1150px) {
+    #menuToggle{
+        display: inline;
+    }
+    .menubar li {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1151px) {
+    #menulist li , #menulist{
+        display: none;
+    }
+}
+
+
+/*================================================================ Home ================================================================*/
+
+
+@media only screen and (max-width: 850px){
+    .Home_Text{
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+
+    .Home_Container, .all{
+        padding: 30px;
+    }
+
+    .Home_Text{
+        margin-top: 50px;
+    }
+
+    
+    .cognizance_Name{
+        height: 70px;
+        width: auto;
+    }
+
+    .Home_Text p{
+        color: white;
+        font-size: medium;
+        justify-self: right;
+        font-weight: bold;
+    }
+
+    #riveCanvas{
+        margin-top: 50px;
+        height: 300px;
+        width: 300px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 400px){
+
+    .Home_Container, .all{
+        padding: 20px;
+    }
+
+    
+    .cognizance_Name{
+        height: 50px;
+        width: auto;
+    }
+
+    .Home_Text p{
+        color: white;
+        font-size: small;
+        justify-self: right;
+        font-weight: bold;
+    }
+
+    #riveCanvas{
+        height: 250px;
+        width: 250px;
+    }
+
+    .logos1 li a i{
+        font-size: large;
+    }
+
+    .logos1 li{
+        padding-right: 10px;
+    }
+
+    .cognizance_Name_2{
+        font-size: medium;
+    }
+
+    .contact_container1{
+        margin-top: -20px;
+    }
+    
+
+}
+
+/*================================================================ About ================================================================*/
+
+@media only screen and (max-width: 900px){
+
+    .aboutcog{
+        width: 600px;
+    }
+
+    .whycogans div{
+        justify-self: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding:20px;
+        border-radius: 10px;
+        color: white;
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+    .aboutcog{
+        width: 300px;
+    }
+
+    .whycogans div{
+        justify-self: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding:20px;
+        border-radius: 10px;
+        color: white;
+        width: 200px;
+    }
+
+    .whycogans{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .knowus br{
+        display: inline;
+    }
+
+}
+
+
+/*============================================================== domains ==============================================================*/
+
+@media only screen and (max-width: 950px){
+    .dl:nth-child(odd), .dl:nth-child(even){
+        flex-direction: column-reverse;
+    }
+
+    .dlbg{
+        padding: 20px;
+        background-image:linear-gradient(360deg, rgb(112, 165, 244), rgb(164, 248, 236));
+        width: 300px;
+        height: fit-content;
+        text-align: justify;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .dl img{
+        border-radius: 10px;
+        height: auto;
+        width: 300px;
+    }
+    
+
+}
+
+
+/*================================================================ Work ================================================================*/
+
+@media only screen and (max-width: 500px){
+
+    .wrapper{
+        margin-top: 5px;
+    }
+
+    .video-container iframe, .video-container img{
+        width:200px;
+        height:auto;
+    }
+
+    .about_the_work{
+        margin-top: 10px;
+        padding:0 30px 0 30px;
+        font-size: small;
+    }
+
+    .try_button{
+        margin-left: 30px;
+    }
+
+}
+
+
+/*================================================================ Contact ================================================================*/
+
+@media only screen and (max-width: 1020px){
+    .form-group-title{
+        width: 100px;
+    }
+    .contact-form input, .contact-form textarea{
+        width: 400px;
+    }
+    .contact-form {
+        border-spacing: 30px 20px; 
+      }
+}
+
+@media only screen and (max-width: 900px){
+
+    .contact-form input, .contact-form textarea{
+        width: 350px;
+    }
+    .contact-form {
+        border-spacing: 20px 20px; 
+    }
+}
+
+@media only screen and (max-width: 770px){
+
+    .contact-form input, .contact-form textarea{
+        width: 300px;
+    }
+    .contact-form {
+        border-spacing: 0px 20px; 
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .contact-form-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-form {
+        border-spacing: 0px 20px; 
+    }
+
+    .logos li a i{
+        font-size: large;
+    }
+
+    .logos li{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    
+    .Nehal_Name_2{
+        font-size: medium;
+        animation: nametransition 3s ease-in-out infinite;
+    }
+
+}
+
+/*================================================================  ================================================================*/

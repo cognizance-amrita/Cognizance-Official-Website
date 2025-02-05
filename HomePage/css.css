@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Sofia&display=swap');
+
+/*================================================================ Html ================================================================*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", serif;
+    text-decoration: none;
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*================================================================ Scrool ===============================================================*/
+
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+
+::-webkit-scrollbar-track {
+    background-image:linear-gradient(360deg, black,rgb(0, 5, 50), rgb(2, 146, 208));
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(95, 175, 251); 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(111, 247, 199); 
+}
+
+/*================================================================ Body ================================================================*/
+
+body{
+    height: auto;
+    overflow-x: hidden;
+    background-color: rgb(2, 146, 208);
+    background-image:linear-gradient(180deg, black,rgb(0, 5, 50), rgb(2, 146, 208));
+}
+
+.Home_Container, .all{
+    padding: 50px;
+    min-height: 100vh;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    display: block;
+    z-index: 10;
+    margin:  0 auto;
+}
+
+/*================================================================ Title ================================================================*/
+
+.Title_text{
+    font-size: x-large;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color:rgb(111, 247, 199);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center
+}
+
+.Title_text1{
+    font-size: x-large;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color:rgb(111, 247, 199);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center
+}
+
+.Title_text2{
+    font-size: x-large;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color:rgb(111, 247, 199);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center
+}
+
+hr{
+    border: 0; 
+    height: 1px;
+    width: 10%;
+    background: linear-gradient(to right, transparent, #ffffff, transparent);
+}
+
+/*=============================================================== Nav Bar ===============================================================*/
+
+.menubar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 35px;
+    text-align: right;
+    transition: top 0.3s;
+    display: block;
+    z-index: 999;
+}
+
+.menubar b{
+    font-size: large;
+}
+
+.menubar li, .menubar a{
+    display:inline-block;
+    color: white;
+    padding: 12px;
+}
+
+
+.menubar li a:hover{
+    background-image: linear-gradient(360deg, rgb(111, 247, 199), rgb(95, 175, 251));
+    color: black;
+    transition:0.3s ease;
+    width:100px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    transform: skewX(20deg);
+    text-align: center;
+    width: fit-content;
+}
+
+.menubar .deltali a:hover {
+    transform: none; 
+    background-image: none;
+}
+
+.delta_logo .d2{
+    height: 20px;
+    width: auto;
+    display: none;
+    transform: translateY(4px);
+
+}
+
+.delta_logo .d1 {
+    height: 20px;
+    width: auto;
+    transform: translateY(4px);
+  }
+  
+.menubar li a:hover .d1 {
+    display: none;
+  }
+  
+.menubar li a:hover .d2 {
+    display: inline;
+  }
+
+/*============================================================= Opening ==============================================================*/
+
+.opening{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.o1{
+    position: relative;
+    background-image: linear-gradient(360deg, rgb(111, 247, 199), rgb(95, 175, 251));
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+}
+
+.o1 {
+    animation: openright 0.5s ease-in-out forwards;
+}
+
+@keyframes openright{
+    from {
+        visibility: visible;
+        transform: translateX(0);
+      }
+      to {
+        visibility: hidden;
+        transform: translateX(100%);
+        display: none;
+      }
+}
+
+/*=============================================================== Home ===============================================================*/
+
+.Home_Text{
+    position: relative;
+    justify-self: left;
+    margin-top: 50px;
+}
+
+.cognizance_Name{
+    height: 100px ;
+    width: auto;
+}
+
+.Home_Text p{
+    color: white;
+    font-size: large;
+    justify-self: right;
+    font-weight: bold;
+}
+
+#riveCanvas{
+    height: 500px;
+    width: 500px;
+}
+
+.contact_container1{
+    position: absolute;
+    top: 90vh;
+}
+
+.logos1{
+    display: flex;
+    justify-content: left;
+    list-style: none;
+}
+
+.logos1 li{
+    padding-right: 20px;
+}
+
+.logos1 li a i{
+    width:30px;
+    transition: ease;
+    color: white;
+    font-size: x-large;
+}
+
+.logos1 i:hover{
+    transition: ease;
+    color: rgb(76, 159, 247);
+  }
+
+
+
+/*=============================================================== About ===============================================================*/
+
+.aboutcog{
+    justify-self: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding:20px;
+    border-radius: 10px;
+    color: white;
+    width: 820px;
+}
+
+.whycog{
+    justify-self: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding:20px;
+    border-radius: 10px;
+    color: white;
+    width: fit-content;
+    border: 5px solid white;
+}
+
+.whycogans{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.whycogans div{
+    justify-self: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding:20px;
+    border-radius: 10px;
+    color: white;
+    width: 350px;
+}
+
+.knowus a {
+    display: inline-block; /* Ensures proper padding */
+    background-image: linear-gradient(90deg, rgb(240, 62, 246), rgb(62, 148, 246));
+    background-size: 200%; /* Makes the gradient larger than the button for animation */
+    background-position: left; /* Starting position of the gradient */
+    font-size: small;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border: solid 2px white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-position 0.5s ease, transform 0.3s ease;
+}
+
+.knowus br{
+    display: none;
+}
+
+.knowus a:hover {
+    background-position: right; /* Move the gradient to the other side */
+    transform: scale(1.05); /* Slight scaling for hover effect */
+}
+
+/*=============================================================== Domain ===============================================================*/
+
+
+.domainlist{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 20px;
+}
+
+.dl{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.dl:nth-child(odd){
+    flex-direction: row;
+}
+
+.dl:nth-child(even){
+    flex-direction:row-reverse;
+}
+
+.dlbg{
+    padding: 20px;
+    background-image:linear-gradient(360deg, rgb(112, 165, 244), rgb(164, 248, 236));
+    width: 400px;
+    height: fit-content;
+    text-align: justify;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.dl img{
+    border-radius: 10px;
+    height: auto;
+    width: 400px;
+}
+
+.dltitle{
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+/*=============================================================== updates ===============================================================*/
+
+.wrapper {
+  width: 100%;
+  position: relative; 
+}
+
+.arrows i {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    margin-bottom: 20px;
+  }
+  
+  .arrows i:active{
+    transform: scale(0.85);
+  }
+  
+  .arrows{
+      justify-self: right;
+  }
+
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.card{
+    background-image: linear-gradient(rgb(111, 247, 199), rgb(95, 175, 251));
+}
+
+.card .img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+}
+
+.carousel .card h2 {
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+
+.carousel .card span {
+  color: black;
+  font-weight: bold;
+  font-size: 1.31rem;
+}
+@media screen and (max-width: 1200px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+/*=================================== card inside ==========================================*/
+
+.card .video-container {
+  display: none;
+}
+
+.card .video-container img, .card .video-container iframe{
+  border-radius: 10px;
+}
+
+.card .img,.card h2,.card span{
+  animation: slideInFromTop 1s ease;
+  border-radius: 10px;
+}
+
+.card:hover .video-container {
+  display:inline-block;
+  animation: slideInFromTop 1s ease;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.video-container::-webkit-scrollbar-track {
+    display: none;
+}
+
+.video-container::-webkit-scrollbar-thumb {
+    margin-left: 20px;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+    from {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-20px);
+    }
+}
+
+.card:hover .img, .card:hover h2, .card:hover span {
+  display: none;
+}
+
+.card .video-container .about_the_work{
+  margin-top: 10px;
+  text-align: justify;
+  font-weight: bold;
+  max-width: 300px;
+}
+
+.card .video-container .try_button{
+  color:black;
+  font-weight: bold;
+  background-color: white;
+  margin-top: 10px;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: small;
+}
+
+.card .video-container .try_button:hover{
+  color:white;
+  font-size: small;
+  background-color: black;
+  transition: 0.2s ease-in-out;
+}
+
+.card .video-container .try_button:hover .button{
+  color:white;
+  border: 1px white;
+}
+
+/*=============================================================== Achievement ============================================================*/
+
+
+/*=============================================================== Contact ==========================================================*/
+
+.contact_container{
+    text-align: center;
+}
+
+#name{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#email{
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+#subject{
+    background-color: rgb(255, 255, 255, 0.6);
+}
+
+textarea{
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.my_email{
+    padding: 10px;
+    font-size: small;
+    color: white;
+}
+
+.contact-form-div{
+    display: flex;
+    flex-direction:unset;
+    position: relative;
+    justify-content: space-around;
+  }
+
+.contact-form {
+    border-collapse: separate;
+    border-spacing: 20px; 
+}
+
+input,textarea{
+    border-radius: 30px;
+    border: 0px;
+    padding-left:20px ;
+    height: 40px;
+    font-size: larger;
+    font-weight: 900;
+    width: 400px;
+    color: rgb(0, 0, 0);
+}
+
+textarea{
+    height:150px;
+    padding-top: 10px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgb(24, 38, 53, 0.4);
+    font-style: italic;
+}
+
+.btn-md{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: 900;
+    border: none;
+    color: white;
+    background-color:rgb(76, 159, 247);
+    margin-bottom: 50px;
+}
+
+.btn-md:hover{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.logos{
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.logos li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logos li a i{
+    width:30px;
+    transition: ease;
+    color: white;
+    font-size: x-large;
+}
+
+.logos i:hover{
+    width:30px;
+    transition: ease;
+    color: rgb(76, 159, 247);
+  }
+
+.cognizance_Name_2{
+    font-size: large;
+    color: white;
+    margin-top: 2px;
+    animation: nametransition 3s ease-in-out infinite;
+}
+
+@keyframes nametransition {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+    }
+    20% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+    }
+    80% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+    }
+}
+
+/*================================================================ Music ================================================================*/
+
+#myAudio {
+  display: none;
+}
+
+.fa-volume-high:hover{
+color: greenyellow;
+}
+
+.fa-volume-xmark:hover{
+color: red;
+}
+
+/*========================================================= All transition =============================================================*/
+
+@keyframes BodyslideInFromTop {
+    from {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+}
+  
+.slide-in {
+    animation: BodyslideInFromTop 0.8s ease-in-out;
+}
+
+@keyframes BodyslideInFromLeft {
+    from {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+}
+  
+.slide-in-2 {
+    animation: BodyslideInFromLeft 0.8s ease-in-out;
+}
+
+@keyframes BodyslideInFromLeft2 {
+    from {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+}
+  
+.slide-in-3 {
+    animation: BodyslideInFromLeft2 0.8s ease-in-out;
+}
