@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="TeamPage\Team_css.css">
     <link rel="stylesheet" href="TeamPage\Team_css2.css">
+    <link rel="stylesheet" href="HomePage\menubar_css.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="icon" href="TeamPage\Team_assets\logo.png" type="image/x-icon">
@@ -19,22 +20,50 @@
 
 <body>
 
-    <div class="top_buttons">
-        <a class="home_arrow" href="/"><i class="fas fa-arrow-left"></i></a>
-    </div>
-
     <div class="opening">
         <div class="o1"></div>
     </div>
 
     <img class="coglogo" src="TeamPage\Team_assets\logo.png">
 
+    <!-- ================================================== Navigation Bar ================================================== -->
+
+    <div class="navbar">
+        <nav class="menubar">
+            <ul>
+                <li><a href="\"><b>Home</b></a></li>
+                <li><a href="team.html"><b>The Team</b></a></li>
+                <li class="deltali"><a href="delta.html"><b class="delta_logo"><img class="d1" src="HomePage\assets\deltagif.gif" alt="Delta"><img class="d2" src="HomePage\assets\deltagif2.gif" alt="Delta"></b></a></li>
+                <li><a href="\"><b>Weekly Tasks</b></a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdfO8NJdNarKcUo3ZuEjn6pNGOjrbQ1i6LECyazYypPbmcKOA/closedform" target="_blank"><b>Apply</b></a></li>
+                <li><a href="#contact"><b>Contact</b></a></li>
+                <!--<audio id="myAudio" controls><source src="HomePage\assets\audio.mp3" type="audio/mpeg"></audio>
+                <li class="playButton_1" onclick="toggleMute()"><span><i class="fas fa-volume-high"></i></span></li> -->
+                
+                <li id="menuToggle" onclick="toggleMenu()"><span class="dots-btn"><i class="fas fa-bars"></i></span></li>
+                <li id="menulist" class="menu-open"><ul>
+                    <li><a href="/"><b>Home</b></a></li>
+                    <li><a href="team.html"><b>The Team</b></a></li>
+                    <li class="deltali"><a href="delta.html"><b class="delta_logo"><img class="d1" src="HomePage\assets\deltagif.gif" alt="Delta"><img class="d2" src="HomePage\assets\deltagif2.gif" alt="Delta"></b></a></li>
+                    <li><a href="https://preliminary-tasks.cognizance-amrita.in/" target="_blank"><b>Weekly Tasks</b></a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdfO8NJdNarKcUo3ZuEjn6pNGOjrbQ1i6LECyazYypPbmcKOA/closedform" target="_blank"><b>Apply</b></a></li>
+                    <li><a href="#contact"><b>Contact</b></a></li>
+                    <!--<li class="playButton_2" onclick="toggleMute()"><span><i class="fas fa-volume-high"></i></span></li>-->
+                </li>
+            </ul>
+            
+        </nav>
+    </div>
      
 <!-- ================================================== Main ================================================== -->
 
     <div id="education" class="education">
 
+        
+
         <div class="Education_Container">
+
+            <div class="team_title">Our Team</div>
 
             <div class="timecontainer">
                 <ul class="personul">
