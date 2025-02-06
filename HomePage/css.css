@@ -42,7 +42,7 @@ html{
 body{
     height: auto;
     overflow-x: hidden;
-    background-color: rgb(2, 146, 208);
+    background-color: black;
     background-image:linear-gradient(180deg, black,rgb(0, 5, 50), rgb(2, 146, 208));
 }
 
