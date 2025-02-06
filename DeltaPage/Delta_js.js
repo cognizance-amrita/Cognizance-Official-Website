@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('DOMContentLoaded', () => {
     window.onload = function() {
         const audio1 = document.getElementById('myAudio');
-        const icon1 = document.querySelector('.playButton_1 i');
         audio1.play();
+        const icon1 = document.querySelector('.playButton_1 i');
         icon1.classList.add('rot_anime');
     };
     });
@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleMute() {
     var audio = document.getElementById('myAudio');
     const icon1 = document.querySelector('.playButton_1 i');
+    
 
     if (audio.muted) {
         audio.muted = false;
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //-----------------------------------------------------------------------img--------------------------------------------------------------------
 
-    const gallery = document.querySelectorAll('img');
+    const gallery = document.querySelectorAll('.timecontainer img');
 
     gallery.forEach(img => {
         img.addEventListener('click', () => {

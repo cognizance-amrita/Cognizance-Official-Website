@@ -113,6 +113,7 @@ body{
 }
 
 .cog{
+    margin-top: 50px;
     height: 40px;
     width: auto;
 }
@@ -306,6 +307,7 @@ img{
     flex-direction: row-reverse;
     justify-content: left;
     gap: 10px;
+    z-index: 999;
   }
 
   .fa-volume-high:hover{
