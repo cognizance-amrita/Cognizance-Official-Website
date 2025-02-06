@@ -41,7 +41,6 @@ body{
     height: auto;
     overflow-x: hidden;
     background-color: black;
-    font-style: italic;
 }
 
 
@@ -68,6 +67,7 @@ body{
   
 /*=============================================================== Nav Bar ===============================================================*/
 
+
 .menubar{
     position: absolute;
     top: 0;
@@ -77,7 +77,7 @@ body{
     text-align: right;
     transition: top 0.3s;
     display: block;
-    z-index: 998;
+    z-index: 999;
 }
 
 .menubar b{
@@ -129,6 +129,7 @@ body{
 .menubar li a:hover .d2 {
     display: inline;
   }
+
 
 
 /*============================================================= Opening ==============================================================*/
@@ -384,7 +385,7 @@ img{
   color: red;
   }
 
-  .fas {
+  .fa-volume-high, .fa-volume-xmark {
     font-size: 20px;
     position: absolute;
     color: black;
