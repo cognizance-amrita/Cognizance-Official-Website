@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('DOMContentLoaded', () => {
     window.onload = function() {
         const audio1 = document.getElementById('myAudio');
+        const icon1 = document.querySelector('.playButton_1 i');
         audio1.play();
+        icon1.classList.add('rot_anime');
     };
     });
 
@@ -73,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     }
 
-    toggleMute()
+   
       
 
     //-----------------------------------------------------------------------img--------------------------------------------------------------------
