@@ -37,11 +37,13 @@ html{
 
 /*================================================================ Body ================================================================*/
 
-body{
+body {
     height: auto;
     overflow-x: hidden;
-    background-image:linear-gradient(360deg, lightgreen, white);
+    background-image: linear-gradient(360deg, lightgreen, white);
+    background-attachment: fixed;
 }
+
 
 .Task_Container,.contact_container{
     padding: 50px;
