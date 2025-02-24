@@ -214,7 +214,7 @@ hr{
 /*=============================================================== Home ===============================================================*/
 
 .Home_Text{
-    position: relative;
+    position: absolute;
     justify-self: left;
     margin-top: 50px;
 }
