@@ -214,20 +214,19 @@ hr{
 /*=============================================================== Home ===============================================================*/
 
 .Home_Text{
-    position: absolute;
-    justify-self: left;
+    justify-content: center;
     margin-top: 50px;
+    width: fit-content;
 }
 
 .cognizance_Name{
     height: 100px ;
-    width: auto;
 }
 
 .Home_Text p{
     color: white;
     font-size: large;
-    justify-self: right;
+    text-align: right;
     font-weight: bold;
 }
 
@@ -331,6 +330,7 @@ hr{
 
 
 .domainlist{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -793,3 +793,4 @@ color: red;
 .slide-in-3 {
     animation: BodyslideInFromLeft2 0.8s ease-in-out;
 }
+
