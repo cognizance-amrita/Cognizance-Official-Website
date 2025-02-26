@@ -170,14 +170,16 @@ body{
 .team_title{
     color: aquamarine;
     font-size: x-large;
-    justify-self: center;
     margin-bottom: 50px;
     font-weight: bold;
 }
 
-
 .Education_Container {
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 .timecontainer .personul {
@@ -228,7 +230,6 @@ body{
     height: 240px;
     object-fit: cover;
     margin-bottom: 10px;
-    transition: 0.5s ease-in-out;
 }
 
 .show p {
@@ -240,7 +241,7 @@ body{
     max-height: 0;
     overflow: hidden;
     font-size: small;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -270,7 +271,6 @@ body{
 .links .li i:hover {
     transform: translateY(-3px);
 }
-
 
 /*=============================================================== Contact ==========================================================*/
 
