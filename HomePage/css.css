@@ -271,6 +271,7 @@ hr{
 }
 
 .aboutcog{
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.2);
     padding:20px;
     border-radius: 10px;
@@ -279,7 +280,6 @@ hr{
 }
 
 .whycog{
-    justify-self: center;
     background-color: rgba(255, 255, 255, 0.2);
     padding:20px;
     border-radius: 10px;
@@ -296,7 +296,6 @@ hr{
 }
 
 .whycogans div{
-    justify-self: center;
     background-color: rgba(255, 255, 255, 0.2);
     padding:20px;
     border-radius: 10px;
@@ -796,4 +795,3 @@ color: red;
 .slide-in-3 {
     animation: BodyslideInFromLeft2 0.8s ease-in-out;
 }
-
