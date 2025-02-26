@@ -207,12 +207,16 @@ hr{
     padding: 20px;
     width: 350px;
     margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
 }
 
 .heading{
     color: white;
     font-size: larger;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 p{
