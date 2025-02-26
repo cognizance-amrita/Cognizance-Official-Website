@@ -194,6 +194,13 @@ hr{
 
 /*=============================================================== Main ===============================================================*/
 
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .timecontainer li{
     background-image: linear-gradient(rgb(100, 102, 223),rgb(1, 26, 74));
     border-radius: 10px;
