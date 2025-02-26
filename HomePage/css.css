@@ -68,7 +68,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:center
+    justify-content:center;
+    align-self: stretch;
 }
 
 .Title_text1{
@@ -80,7 +81,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:center
+    justify-content:center;
+    align-self: stretch;
 }
 
 .Title_text2{
@@ -92,7 +94,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:center
+    justify-content:center;
+    align-self: stretch;
 }
 
 hr{
@@ -267,12 +270,16 @@ hr{
 /*=============================================================== About ===============================================================*/
 
 .About_Container{
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .aboutcog{
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     padding:20px;
     border-radius: 10px;
@@ -285,11 +292,13 @@ hr{
     padding:20px;
     border-radius: 10px;
     color: white;
+    text-align: center;
     width: fit-content;
     border: 5px solid white;
 }
 
 .whycogans{
+    justify-content: center;
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -331,12 +340,17 @@ hr{
 
 /*=============================================================== Domain ===============================================================*/
 
+.Domain_Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .domainlist{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -404,7 +418,8 @@ hr{
   }
   
   .arrows{
-      justify-self: right;
+    display: flex;
+    justify-content: end;
   }
 
 .wrapper .carousel{
