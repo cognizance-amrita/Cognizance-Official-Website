@@ -180,13 +180,16 @@ body{
 .team_title{
     color: aquamarine;
     font-size: x-large;
-    justify-self: center;
     margin-bottom: 50px;
     font-weight: bold;
 }
 
 .Education_Container {
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 .timecontainer .personul {
@@ -352,28 +355,3 @@ body{
         transform: translateY(-10px);
     }
 }
-
-/*=============================================================== home ==========================================================*/
-  
-  .top_buttons{
-    padding: 10px;
-    position: fixed;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
-    gap: 10px;
-  }
-
- .home_arrow{
-    background-color: #ffffff;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .fa-arrow-left:hover{
-    color: rgb(0, 98, 255);
-    }
