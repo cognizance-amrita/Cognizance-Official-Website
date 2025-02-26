@@ -154,6 +154,8 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
+    z-index: 998;
+    animation: openright 0.5s ease-in-out forwards;
 }
 
 .o1{
@@ -161,7 +163,7 @@ body {
     background-image: linear-gradient(360deg, rgb(111, 247, 199), rgb(95, 175, 251) );
     height: 100vh;
     width: 100%;
-    z-index: 999;
+    z-index: 998;
 }
 
 .o1 {
@@ -184,13 +186,17 @@ body {
 
 .Task_Container {
     text-align: left;
+    z-index: 999;
 }
 
 .task_lists{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-self: center;
+}
+
+.task_lists ul{
     list-style:decimal;
     font-weight: bold;
     font-size: x-large;
