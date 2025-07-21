@@ -1,264 +1,183 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>202146191</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linear Regression Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
     body {
+      background-color: #000;
+      color: #f5f5f5;
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.7;
+      padding: 60px 20px;
+      max-width: 850px;
       margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
     }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
+
+    h1, h2, h3, h4 {
+      font-weight: 800;
+      color: #9f60ff;
+      margin-top: 2em;
     }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
+
+    h1 {
+      font-size: 2.2rem;
     }
+
+    h2 {
+      color: #00e699;
+      font-size: 1.7rem;
+    }
+
+    h3 {
+      color: #55ccff;
+      font-size: 1.4rem;
+    }
+
     p {
       margin: 1em 0;
+      font-size: 1.1rem;
     }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
+
     blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
+      background: #111;
+      border-left: 4px solid #444;
+      padding: 15px 20px;
+      margin: 1em 0;
+      color: #ccc;
+      font-family: monospace;
     }
+
+    strong {
+      color: #ff66cc;
+    }
+
+    em {
+      color: #ffcc66;
+    }
+
     code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
+      background: #1a1a1a;
+      color: #00ffaa;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
     }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
+
+    a {
+      color: #66ccff;
+      text-decoration: underline;
     }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
+
+    ul, ol {
+      margin-left: 2em;
     }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
+
+    @media (max-width: 600px) {
+      body {
+        padding: 30px 15px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
     }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
-<h1 id="sample-linear-regression-program">Sample Linear Regression
-Program</h1>
-<p><strong>Goal:</strong> Use <strong>Linear</strong>
-<strong>Regression</strong> to predict student marks based on hours
-studied. —</p>
+
+<h1 id="sample-linear-regression-program">Sample Linear Regression Program</h1>
+
+<p><strong>Goal:</strong> Use <strong>Linear Regression</strong> to predict student marks based on hours studied.</p>
+
 <p>📁 <strong>1.</strong> Read the Dataset</p>
-<p>Use <strong>pandas</strong> to load the dataset (assume the file is
-named student_scores.csv ).</p>
+<p>Use <strong>pandas</strong> to load the dataset (assume the file is named <code>student_scores.csv</code>).</p>
+
 <blockquote>
-<p>import pandas as pd</p>
-<p># Load the CSV file</p>
-<p>df = pd.read_csv(“student_scores.csv”)</p>
+import pandas as pd<br>
+# Load the CSV file<br>
+df = pd.read_csv("student_scores.csv")
 </blockquote>
+
 <p>📝 <strong>Explanation:</strong></p>
-<p>We use pandas.read_csv() to load the dataset. The data should have
-two columns: Hours and Marks .</p>
-<p>🧮 <strong>2.</strong> Split Data into Features (X) and Target
-(y)</p>
+<p>We use <code>pandas.read_csv()</code> to load the dataset. The data should have two columns: <code>Hours</code> and <code>Marks</code>.</p>
+
+<p>🧮 <strong>2.</strong> Split Data into Features (X) and Target (y)</p>
+
 <blockquote>
-<p># Split the dataset</p>
-<p>X = df[[‘Hours’]] # Features (2D array for sklearn) y = df[‘Marks’] #
-Target values (1D array)</p>
+# Split the dataset<br>
+X = df[['Hours']]  # Features (2D array for sklearn)<br>
+y = df['Marks']    # Target values (1D array)
 </blockquote>
+
 <p>📝 <strong>Explanation:</strong></p>
-<p>We separate the independent variable (Hours studied) and the
-dependent variable (Marks scored). X must be 2D, hence we use double
-brackets.</p>
+<p>We separate the independent variable (<code>Hours</code>) and the dependent variable (<code>Marks</code>). <code>X</code> must be 2D, hence we use double brackets.</p>
+
 <p>🧠 <strong>3.</strong> Train a Linear Regression Model</p>
+
 <blockquote>
-<p>from sklearn.linear_model import LinearRegression</p>
-<p># Create the model</p>
-<p>model = LinearRegression()</p>
-<p># Fit the model with the data model.fit(X, y)</p>
+from sklearn.linear_model import LinearRegression<br>
+# Create the model<br>
+model = LinearRegression()<br>
+# Fit the model with the data<br>
+model.fit(X, y)
 </blockquote>
+
 <p>📝 <strong>Explanation:</strong></p>
-<p>We import LinearRegression from sklearn.linear_model and fit the
-model using X and y .</p>
+<p>We import <code>LinearRegression</code> from <code>sklearn.linear_model</code> and fit the model using <code>X</code> and <code>y</code>.</p>
+
 <p>🔮 <strong>4.</strong> Predict Marks</p>
+
 <blockquote>
-<p># Predict for 6 hours of study predicted_marks =
-model.predict([[4]])</p>
-<p>print(f”Predicted Marks for 6 hours of study:
-{predicted_marks[0]:.2f}“)</p>
+# Predict for 6 hours of study<br>
+predicted_marks = model.predict([[6]])<br>
+print(f"Predicted Marks for 6 hours of study: {predicted_marks[0]:.2f}")
 </blockquote>
+
 <p>📝 <strong>Explanation:</strong></p>
-<p>We pass the input in double brackets [[4]] because the model expects
-a 2D array as input for prediction.</p>
-<p>📊 <strong>5.</strong> (Optional) Evaluate the Model with R²
-Score</p>
-<p>Visit <a
-href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html"><u>https://scikit-learn.org/stable/modules/</u>g<u>enerated/sklearn.metrics.r2_score.html</u></a>
-to know more about <em>R</em>2 Score</p>
+<p>We pass the input in double brackets <code>[[6]]</code> because the model expects a 2D array as input for prediction.</p>
+
+<p>📊 <strong>5.</strong> (Optional) Evaluate the Model with R² Score</p>
+
+<p>Visit <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html" target="_blank">scikit-learn R² Score Documentation</a> to learn more.</p>
+
 <blockquote>
-<p>from sklearn.metrics import r2_score</p>
-<p># Predict marks for all X to get predicted y values y_pred =
-model.predict(X)</p>
-<p># Calculate R² Score</p>
-<p>r2 =</p>
-<p>print(f”Model Accuracy (R² Score): {r2:.2f}“)</p>
+from sklearn.metrics import r2_score<br>
+# Predict marks for all X<br>
+y_pred = model.predict(X)<br>
+# Calculate R² Score<br>
+r2 = r2_score(y, y_pred)<br>
+print(f"Model Accuracy (R² Score): {r2:.2f}")
 </blockquote>
+
 <p>📝 <strong>Explanation:</strong></p>
-<p>The R² score tells us how well the regression line fits the actual
-data. A value closer to 1 indicates better accuracy.</p>
-<p>🏠 New ML Task: House Rent Prediction Using Linear Regression</p>
-<p>🎯 Objective</p>
-<p>Build and train a Linear Regression model to <strong>predict</strong>
-<strong>house</strong> <strong>rent</strong> <strong>based</strong>
-<strong>on</strong> <strong>house</strong> <strong>size</strong>
-<strong>(in</strong> <strong>square</strong> <strong>feet)</strong>
-using a synthetic dataset.</p>
-<p>📘 Scenario</p>
-<p>You are a data analyst for a rental agency. They want to automate
-rental price estimation based on the <strong>size</strong>
-<strong>of</strong> <strong>a</strong> <strong>house</strong>
-<strong>(sq.ft)</strong>. Using historical data of house sizes and their
-corresponding monthly rents, help build a prediction system to estimate
-rent for a new property.</p>
-<p>🧪 Task Instructions: House Rent Prediction</p>
+<p>The R² score tells us how well the regression line fits the actual data. A value closer to 1 indicates better accuracy.</p>
+
+<h2>🏠 New ML Task: House Rent Prediction Using Linear Regression</h2>
+
+<h3>🎯 Objective</h3>
+<p>Build and train a Linear Regression model to <strong>predict house rent</strong> based on <strong>house size (in square feet)</strong> using a synthetic dataset.</p>
+
+<h3>📘 Scenario</h3>
+<p>You are a data analyst for a rental agency. They want to automate rental price estimation based on the <strong>size of a house (sq.ft)</strong>. Using historical data of house sizes and their corresponding monthly rents, help build a prediction system to estimate rent for a new property.</p>
+
+<h3>🧪 Task Instructions: House Rent Prediction</h3>
+
 <blockquote>
-<p>1. Load the dataset from the provided CSV file using pandas. 2. Split
-the dataset into:</p>
-<p>X : House size in square feet y : Monthly rent in INR</p>
-<p>3. Train a Linear Regression model using
-sklearn.linear_model.LinearRegression .</p>
-<p>4. Predict the rent for a house with <strong>1200</strong>
-<strong>sqft</strong> area.</p>
-<p>5. Visualize the data and the regression line using a scatter plot.
-6. Highlight the predicted rent point on the plot.</p>
-<p>7. (Optional) Calculate the model’s accuracy using
-<strong>R²</strong> <strong>Score</strong>.</p>
-<p>8. Submit your code/script and predicted rent output for 5000 square
-feet.</p>
-<p>9. Answer this reflection question:</p>
-<p>What other features could improve this rent prediction model?</p>
+1. Load the dataset from the provided CSV file using pandas.<br>
+2. Split the dataset into:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;X : House size in square feet<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y : Monthly rent in INR<br>
+3. Train a Linear Regression model using <code>sklearn.linear_model.LinearRegression</code>.<br>
+4. Predict the rent for a house with <strong>1200 sqft</strong> area.<br>
+5. Visualize the data and the regression line using a scatter plot.<br>
+6. Highlight the predicted rent point on the plot.<br>
+7. (Optional) Calculate the model’s accuracy using <strong>R² Score</strong>.<br>
+8. Submit your code/script and predicted rent output for 5000 square feet.<br>
+9. Answer this reflection question:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>What other features could improve this rent prediction model?</em>
 </blockquote>
+
 </body>
 </html>
