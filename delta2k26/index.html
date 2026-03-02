@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELTA 2026 | ENTER</title>
+    <style>
+        body {
+            background-color: #0a0a1a;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Clicking this image redirects to your new dashboard */
+        .logo-link {
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .logo-link img {
+            max-width: 400px;
+            filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.5));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo-link:hover img {
+            filter: drop-shadow(0 0 20px #00ffff);
+            transform: scale(1.05);
+        }
+
+        .tap-text {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            color: #0066FF;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="cognizance.html" class="logo-link">
+        <img src="image_c8642d.png" alt="DELTA 2K26 Logo">
+    </a>
+
+    <div class="tap-text">Click Logo to Enter Cognizance</div>
+
+</body>
+</html>
